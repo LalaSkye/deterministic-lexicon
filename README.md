@@ -4,6 +4,10 @@ A tiny, deterministic vocabulary primitive. Fixed terms, exact matches, no infer
 
 **v0.1.0** | MIT License | Zero dependencies
 
+## Why this exists
+
+Systems that rely on natural language parsing or fuzzy matching for control vocabulary introduce ambiguity at the foundation. This primitive eliminates that: every term is defined once, looked up exactly, and never inferred. If a term isn't in the lexicon, it doesn't exist. No synonyms, no stemming, no surprises.
+
 ## What it does
 
 `DeterministicLexicon` stores a fixed set of `{term: definition}` pairs. After construction, the lexicon is frozen (immutable). All lookups are exact-match, O(1), with no fallbacks and no fuzzy matching.
