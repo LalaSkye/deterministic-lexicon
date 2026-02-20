@@ -1,3 +1,5 @@
+![CI](https://github.com/LalaSkye/deterministic-lexicon/actions/workflows/ci.yml/badge.svg)
+
 # deterministic-lexicon
 
 A tiny, deterministic vocabulary primitive. Fixed terms, exact matches, no inference.
