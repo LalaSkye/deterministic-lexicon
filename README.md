@@ -8,7 +8,9 @@ A tiny, deterministic vocabulary primitive. Fixed terms, exact matches, no infer
 
 ## Why this exists
 
-Systems that rely on natural language parsing or fuzzy matching for control vocabulary introduce ambiguity at the foundation. This primitive eliminates that: every term is defined once, looked up exactly, and never inferred. If a term isn't in the lexicon, it doesn't exist. No synonyms, no stemming, no surprises.
+Systems that rely on natural language parsing or fuzzy matching for control vocabulary introduce ambiguity at the foundation. This primitive eliminates that: every term is defined once, looked up exactly, and never inferred. If a term isn't in the lexicon, it doesn't exist. No synonyms, no stemming, no surprises. Fail-closed: unknown terms are errors, not guesses.
+
+This supports consistent terminology across authority gates, commit boundaries, and admissibility surfaces.
 
 ## What it does
 
