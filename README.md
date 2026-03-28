@@ -14,7 +14,7 @@ Fixed vocabulary primitive — exact-match lookups, frozen after construction, n
 
 ## Why This Exists
 
-Systems that rely on natural language parsing or fuzzy matching for control vocabulary introduce ambiguity at the foundation. If your terms drift, everything built on top of them drifts too. This primitive eliminates that: every term is defined once, looked up exactly, and never inferred. If a term is not in the lexicon, it does not exist. Unknown terms are errors, not guesses. This is the foundation layer — authority gates, commit boundaries, and admissibility surfaces all depend on having a stable vocabulary to reason against. Install this primitive before wiring up anything that names control states.
+Systems that rely on natural language parsing or fuzzy matching for control vocabulary introduce ambiguity at the foundation. If your terms drift, everything built on top of them drifts too. This primitive eliminates that: every term is defined once, looked up exactly, and never inferred. If a term is not in the lexicon, it does not exist. Unknown terms are errors, not guesses. This is the foundation layer — execution gates, commit boundaries, and admissibility surfaces all depend on having a stable vocabulary to reason against. Install this primitive before wiring up anything that names control states.
 
 ---
 
@@ -150,7 +150,7 @@ test_deterministic_lexicon.py::test_strip_collision_rejected PASSED
 | [dual-boundary-admissibility-lab](https://github.com/LalaSkye/dual-boundary-admissibility-lab) | Full corridor | Dual-boundary model with pressure monitoring and C-sector rotation |
 | [execution-boundary-lab](https://github.com/LalaSkye/execution-boundary-lab) | Execution boundary | Demonstrates cascading failures without upstream governance |
 | [stop-machine](https://github.com/LalaSkye/stop-machine) | Control primitive | Deterministic three-state stop controller |
-| [constraint-workshop](https://github.com/LalaSkye/constraint-workshop) | Control primitives | Authority gate, invariant litmus, stop machine |
+| [constraint-workshop](https://github.com/LalaSkye/constraint-workshop) | Control primitives | Execution gate, invariant litmus, stop machine |
 | [csgr-lab](https://github.com/LalaSkye/csgr-lab) | Measurement | Contracted stability and drift measurement |
 | [invariant-lock](https://github.com/LalaSkye/invariant-lock) | Drift prevention | Refuse execution unless version increments |
 | [policy-lint](https://github.com/LalaSkye/policy-lint) | Policy validation | Deterministic linter for governance statements |
@@ -173,3 +173,8 @@ No rights to use, reproduce, or implement are granted without explicit permissio
 **Repository owner:** [LalaSkye](https://github.com/LalaSkye)
 **Status:** Active research / architecture work
 **Part of:** [Execution Boundary Series](https://github.com/LalaSkye) — TrinityOS / AlvianTech
+
+---
+
+This repository demonstrates deterministic control using standard engineering techniques. No proprietary frameworks or external implementations are used.
+
